@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 429396171389090711}
   - component: {fileID: 656359689052405761}
   - component: {fileID: 7908492929273468435}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Beam
   m_TagString: Weapon
   m_Icon: {fileID: 0}
