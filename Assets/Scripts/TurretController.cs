@@ -19,7 +19,7 @@ public class TurretController : MonoBehaviour
     void Update()
     {
  
-        if (Input.GetKeyDown(KeyCode.Mouse1) && tmp < 0)
+        if (Input.GetKey(KeyCode.Mouse1) && tmp < 0)
         {
             tmp = cooldown;
             Turret();
