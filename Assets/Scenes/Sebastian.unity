@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 462438885}
   - component: {fileID: 462438884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 1445191909}
   - component: {fileID: 1445191911}
   - component: {fileID: 1445191912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,8 @@ GameObject:
   - component: {fileID: 1829929003}
   - component: {fileID: 1829929005}
   - component: {fileID: 1829929006}
-  m_Layer: 0
+  - component: {fileID: 1829929007}
+  m_Layer: 7
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,3 +773,19 @@ MonoBehaviour:
   MaxVelocity: 7
   MaxAngularVelocity: 90
   MaxRotationAngle: 135
+--- !u!70 &1829929007
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829929002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
