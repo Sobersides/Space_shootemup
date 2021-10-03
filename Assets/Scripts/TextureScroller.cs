@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextureScroller : MonoBehaviour {
-    private MeshRenderer renderer;
+    private MeshRenderer meshRenderer;
     public float speed = 5;
 
 
     // Start is called before the first frame update
     void Start() {
-        renderer = GetComponent<MeshRenderer>();
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update() {
-        var offset = renderer.material.mainTextureOffset;
+        var offset = meshRenderer.material.mainTextureOffset;
         offset.y += speed * Time.deltaTime;
-        renderer.material.SetTextureOffset("_MainTex", offset);
+        meshRenderer.material.SetTextureOffset("_MainTex", offset);
     }
 }
+  
