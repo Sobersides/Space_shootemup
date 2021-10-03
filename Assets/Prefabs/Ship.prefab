@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4ba9072519cd94e80729abc8937038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallAmmo: {fileID: 2375092083978698760, guid: 86e5e8afa5f1c8e4fa89d557cac9d856, type: 3}
+  smallAmmo: {fileID: 395068866083563612, guid: 86e5e8afa5f1c8e4fa89d557cac9d856, type: 3}
   cooldown: 0.18
 --- !u!1 &357872845
 GameObject:
