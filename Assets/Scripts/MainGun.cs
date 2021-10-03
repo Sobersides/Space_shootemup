@@ -9,13 +9,14 @@ public class MainGun : MonoBehaviour
     float tmp = 0;
     public void mainGun()
     {
-        var newBeam = Instantiate(basicBeam,this.transform);
+        var newBeam = Instantiate(basicBeam, transform);
         
     }
 
     void Update()
     {
-        while (Input.GetKey(KeyCode.Mouse0) && tmp <= 0)
+
+        if (Input.GetKey(KeyCode.Mouse0) && tmp <= 0)
         {
             tmp = fireRate;
             mainGun();
