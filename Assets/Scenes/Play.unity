@@ -482,11 +482,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroids:
-  - {fileID: 5343945444860632605, guid: e1781ab28ff41504da40d9586dbc937e, type: 3}
-  - {fileID: 2228290385312905328, guid: 4077ee5cbd381bb46a2bbbc805a04382, type: 3}
-  - {fileID: 3886286852995563904, guid: f7821404a79b4cb4196ee814ffdf0891, type: 3}
-  - {fileID: 9048029601749959013, guid: 69c12008e253c2d42a7f0f02ea94d447, type: 3}
-  - {fileID: 41023867451684820, guid: 0127d47ef2d396943a9ec1eaa140ca7d, type: 3}
+  - {fileID: 2602696558225777382, guid: e1781ab28ff41504da40d9586dbc937e, type: 3}
+  - {fileID: 1813059325270159849, guid: 4077ee5cbd381bb46a2bbbc805a04382, type: 3}
+  - {fileID: 6570047163315707367, guid: f7821404a79b4cb4196ee814ffdf0891, type: 3}
+  - {fileID: 2050926798885910041, guid: 69c12008e253c2d42a7f0f02ea94d447, type: 3}
+  - {fileID: 2442751136720100424, guid: 0127d47ef2d396943a9ec1eaa140ca7d, type: 3}
   Waypoint1: {fileID: 625279469}
   Waypoint2: {fileID: 699312789}
   SpawnTime: 1
