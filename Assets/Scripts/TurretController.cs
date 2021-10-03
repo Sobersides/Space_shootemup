@@ -12,7 +12,7 @@ public class TurretController : MonoBehaviour
     float tmp = 0;
     void Turret()
     {
-        var newSmallAmmo = Instantiate(smallAmmo, transform.position + transform.up, transform.rotation);
+        var newSmallAmmo = Instantiate(smallAmmo, transform.position + transform.up * 0.8f, transform.rotation);
 
     }
 
