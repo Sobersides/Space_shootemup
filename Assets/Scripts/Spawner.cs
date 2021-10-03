@@ -25,11 +25,15 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         spawnTimer -= Time.deltaTime;
-        if(spawnTimer < 0 || Input.GetButton("Fire1"))
+        if(spawnTimer < 0)
         {
-            //TODO: Random pick etc.
-            Instantiate(asteroids[0], transform.position, Quaternion.identity);
-            spawnTimer = SpawnTime;
+            // Skip spawn some of the time
+            var index = Random.Range(0, asteroids.Count + 1);
+            if(index < asteroids.Count)
+            {
+                Instantiate(asteroids[index], transform.position, Quaternion.identity);
+                spawnTimer = SpawnTime;
+            }
         }
 
         var toWaypoint = target.transform.position - transform.position;

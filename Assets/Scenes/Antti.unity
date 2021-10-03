@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 324727524}
   - component: {fileID: 324727523}
   m_Layer: 0
-  m_Name: TopTrigger
+  m_Name: TopLimit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 394123002}
   - component: {fileID: 394123003}
   m_Layer: 0
-  m_Name: BottomTrigger
+  m_Name: BottomLimit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
