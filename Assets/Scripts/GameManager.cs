@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         healthTmp -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
             Time.timeScale = 1;
         }
     }
