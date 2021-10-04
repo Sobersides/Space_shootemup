@@ -16,7 +16,7 @@ public class MainGun : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.Mouse0) && tmp <= 0)
+        if (Input.GetButton("Fire1") && tmp <= 0)
         {
             tmp = fireRate;
             mainGun();
