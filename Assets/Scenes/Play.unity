@@ -427,10 +427,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 0}
   takeDamageCooldown: 0
-  health: 2
+  health: 3
   resultText: {fileID: 1691604732}
   healthBar: {fileID: 892678023}
   scoreText: {fileID: 1691604731}
+  liveScoreText: {fileID: 549794448}
 --- !u!4 &60516020
 Transform:
   m_ObjectHideFlags: 0
@@ -828,6 +829,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470371866}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &549794448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6477925649482594837, guid: d6e86f0ee2fd6524aa23f959153cec4e, type: 3}
+  m_PrefabInstance: {fileID: 1691604730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &550197052
 GameObject:
   m_ObjectHideFlags: 0

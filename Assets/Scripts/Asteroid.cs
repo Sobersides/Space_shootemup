@@ -9,9 +9,12 @@ public class Asteroid : MonoBehaviour
     private ParticleSystem explosion;
     private CircleCollider2D collisionDetection;
 
+    GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         explosion = GetComponentInChildren<ParticleSystem>();
         collisionDetection = GetComponent<CircleCollider2D>();
 
@@ -36,6 +39,7 @@ public class Asteroid : MonoBehaviour
             destroyAnimation.SetActive(true);
             explosion.Play();
             Destroy(this.gameObject, .3f);
+            gm.ScoreStatus(10);
         }    
     }
 }

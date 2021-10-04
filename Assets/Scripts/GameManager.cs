@@ -14,17 +14,19 @@ public class GameManager : MonoBehaviour
     public float health;
     float healthTmp;
 
-    int score;
+    int score = 0;
 
     public Text resultText;
     public Text healthBar;
     public Text scoreText;
+    public Text liveScoreText;
 
     void Start()
     {
         music = GetComponent<AudioSource>();
         music.Play();
         HealthStatus(0f);
+        ScoreStatus(0);
         resultText.text = "";
         scoreText.text = "";
     }
@@ -55,8 +57,9 @@ public class GameManager : MonoBehaviour
         }
         
     }
-    public void ScoreStatus()
+    public void ScoreStatus(int addScore)
     {
-
+        score += addScore;
+        liveScoreText.text = "Score: " + score;
     }
 }
