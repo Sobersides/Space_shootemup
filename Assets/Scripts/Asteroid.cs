@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+
+    public GameObject destroyAnimation;
+    private ParticleSystem explosion;
+
     // Start is called before the first frame update
     void Start()
     {
+        explosion = GetComponentInChildren<ParticleSystem>();
+
         // Maybe a kill trigger instead
         Destroy(this.gameObject, 3);
     }
@@ -21,8 +27,9 @@ public class Asteroid : MonoBehaviour
     {
         if(collision.gameObject.tag == "Weapon")
         {
-            // TODO: Play animation
-            Destroy(this.gameObject);
+            destroyAnimation.SetActive(true);
+            explosion.Play();
+            Destroy(this.gameObject, .3f);
         }    
     }
 }
