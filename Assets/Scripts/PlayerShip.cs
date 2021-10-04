@@ -24,23 +24,20 @@ public class PlayerShip : MonoBehaviour
     private bool allowCutoff = true;
     private bool allowThrust = true;
 
-    public float takeDamageCooldown;
-    public float health;
-    float healthTmp;
-    public Text healthBar;
+    GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponentInChildren<Rigidbody2D>();
         initialGravityScale = rb.gravityScale;
-        HealthStatus();
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthTmp -= Time.deltaTime;
+        
     }
 
     void FixedUpdate()
@@ -112,11 +109,8 @@ public class PlayerShip : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         print("Ship collision " + collision.gameObject.name);
-        if (healthTmp < 0)
-        {
-            health--;
-            HealthStatus();
-        }
+        gm.HealthStatus(-1f);
+        
     }
 
 
@@ -145,9 +139,5 @@ public class PlayerShip : MonoBehaviour
         allowThrust = true;
     }
 
-    public void HealthStatus()
-    {
-        healthTmp = takeDamageCooldown;
-        healthBar.text = "Health: " + health;
-    }
+    
 }

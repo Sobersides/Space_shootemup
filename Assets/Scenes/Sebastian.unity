@@ -1635,9 +1635,6 @@ MonoBehaviour:
   mediumFlame: {fileID: 0}
   lowFlame: {fileID: 0}
   flame: 0
-  takeDamageCooldown: 5
-  health: 3
-  healthBar: {fileID: 777846699}
 --- !u!60 &1829929007
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1937,6 +1934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 0}
+  takeDamageCooldown: 5
+  health: 3
+  healthBar: {fileID: 777846699}
 --- !u!4 &2073199360
 Transform:
   m_ObjectHideFlags: 0
