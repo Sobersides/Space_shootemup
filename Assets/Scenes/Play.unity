@@ -425,9 +425,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb81497172793445834065832c5f073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scorePrefab: {fileID: 4817343721117113596, guid: bbe4100e9bb709e459d2d00674b00f32, type: 3}
   ship: {fileID: 0}
-  takeDamageCooldown: 0
-  health: 3
+  takeDamageCooldown: 1
+  health: 1
   resultText: {fileID: 1691604732}
   healthBar: {fileID: 892678023}
   scoreText: {fileID: 1691604731}

@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
+    public GameObject scorePrefab;
     public PlayerShip ship;
-    AudioSource music;
+    ScoreContainer scores;
 
     public float takeDamageCooldown;
     public float health;
@@ -21,10 +22,18 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text liveScoreText;
 
+    
+
     void Start()
     {
-        music = GetComponent<AudioSource>();
-        music.Play();
+        scores = FindObjectOfType<ScoreContainer>();
+        if (scores == null)
+        {
+            var newScores = Instantiate(scorePrefab);
+            scores = newScores.GetComponent<ScoreContainer>();
+            DontDestroyOnLoad(scores.gameObject);
+        }
+
         HealthStatus(0f);
         ScoreStatus(0);
         resultText.text = "";
@@ -51,8 +60,15 @@ public class GameManager : MonoBehaviour
         }
         if (health <= 0)
         {
+            if (score > scores.highScore)
+            {
+                scores.highScore = score;
+                scoreText.text = "New Highscore: " + score;
+            }
+            else
+                scoreText.text = "Score: " + score;
             Time.timeScale = 0;
-            scoreText.text = "Score: " + score;
+            
             resultText.text = "Game over\n Press R to restart";
         }
         
