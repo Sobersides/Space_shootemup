@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cd3989b041a6a47b0970716dfd5542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 1
+  chance: 0.5
   BigObstacle: {fileID: 5070555356972335661, guid: 345afd52f4522974793ae97fb32d62eb, type: 3}
 --- !u!4 &552191465
 Transform:
@@ -1222,6 +1222,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357198616, guid: 5726cce6462b7e041b0979190ab0187c, type: 3}
+      propertyPath: cooldown
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4662605675697567650, guid: 5726cce6462b7e041b0979190ab0187c, type: 3}
+      propertyPath: fireRate
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4662605676214913554, guid: 5726cce6462b7e041b0979190ab0187c, type: 3}
       propertyPath: m_RootOrder
       value: 11
