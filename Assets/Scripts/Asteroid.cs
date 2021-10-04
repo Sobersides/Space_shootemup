@@ -35,7 +35,7 @@ public class Asteroid : MonoBehaviour
             }
             destroyAnimation.SetActive(true);
             explosion.Play();
-            Destroy(this.gameObject, .3f);
+            Destroy(this.gameObject, .2f);
         }    
     }
 }
