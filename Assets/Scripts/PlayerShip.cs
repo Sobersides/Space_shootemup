@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum Flame { Low, Medium, High };
+
 public class PlayerShip : MonoBehaviour
 {
 
@@ -11,7 +13,10 @@ public class PlayerShip : MonoBehaviour
     public float MaxVelocity;
     public float MaxAngularVelocity;
     public float MaxRotationAngle;
-
+    public GameObject highFlame;
+    public GameObject mediumFlame;
+    public GameObject lowFlame;
+    public Flame flame;
 
     private Rigidbody2D rb;
     private float initialGravityScale;
@@ -43,21 +48,53 @@ public class PlayerShip : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
+        Flame lastFlame = flame;
+        flame = Flame.Low;
+
         if (allowCutoff && verticalInput >= 0.0f)
         {
             rb.AddForce(transform.up * DefaultThrust);
+            flame = Flame.Medium;
         }
+
         if (allowThrust && verticalInput > 0.0f && rb.velocity.magnitude < MaxVelocity)
         {
             rb.AddForce(transform.up * Thrust);
+            flame = Flame.High;
+        } //else if (flame != Flame.High && flame != Flame.Medium) {
+
+        //}
+
+        if (flame != lastFlame)
+        {
+
+            lowFlame.SetActive(false);
+            mediumFlame.SetActive(false);
+            highFlame.SetActive(false);
+
+            if (flame == Flame.Low)
+            {
+                lowFlame.SetActive(true);
+            }
+            else if (flame == Flame.Medium)
+            {
+                mediumFlame.SetActive(true);
+            }
+            else
+            {
+                highFlame.SetActive(true);
+            }
         }
 
-        if(horizontalInput > 0.0f)
+
+
+
+        if (horizontalInput > 0.0f)
         {
             // Right
             rb.AddTorque(-1f, ForceMode2D.Impulse);
-        } 
-        else if(horizontalInput < 0.0f) 
+        }
+        else if (horizontalInput < 0.0f)
         {
             // Left
             rb.AddTorque(1f, ForceMode2D.Impulse);
