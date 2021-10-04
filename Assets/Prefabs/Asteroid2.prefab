@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 687283019}
   - component: {fileID: 687283018}
   - component: {fileID: 687283017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: destroyAsteroid2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 1887021541}
   - component: {fileID: 1887021543}
   - component: {fileID: 1887021542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AsteroidExplosion (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4979,7 +4979,7 @@ GameObject:
   - component: {fileID: 1813059325270159851}
   - component: {fileID: 1813059325270159848}
   - component: {fileID: 7694498702007863461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Asteroid2
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
@@ -5063,7 +5063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6646881650003529161}
   - component: {fileID: 6646881650003529160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

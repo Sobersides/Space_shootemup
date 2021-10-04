@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 194977835}
   - component: {fileID: 194977834}
   - component: {fileID: 1970611874008015625}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: highFlameAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 237095775}
   - component: {fileID: 237095774}
   - component: {fileID: 237095773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lowFlameAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 357198615}
   - component: {fileID: 357198618}
   - component: {fileID: 357198616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 357872847}
   - component: {fileID: 357872846}
   - component: {fileID: 6490325100029271002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: mediumFlameAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4662605675697567651}
   - component: {fileID: 4662605675697567650}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 4662605676214913552}
   - component: {fileID: 4662605676214913553}
   - component: {fileID: 4662605676214913558}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ship
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -743,9 +743,6 @@ MonoBehaviour:
   mediumFlame: {fileID: 357872845}
   lowFlame: {fileID: 237095772}
   flame: 0
-  takeDamageCooldown: 0
-  health: 0
-  healthBar: {fileID: 0}
 --- !u!1 &4662605677409430872
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,7 +753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4662605677409430875}
   - component: {fileID: 4662605677409430874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

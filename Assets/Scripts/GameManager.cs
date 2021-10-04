@@ -12,14 +12,20 @@ public class GameManager : MonoBehaviour
     public float takeDamageCooldown;
     public float health;
     float healthTmp;
+
+    int score;
+
+    public Text resultText;
     public Text healthBar;
+    public Text scoreText;
 
     void Start()
     {
         music = GetComponent<AudioSource>();
         music.Play();
         HealthStatus(0f);
-        
+        resultText.text = "";
+        scoreText.text = "";
     }
 
  
@@ -35,5 +41,16 @@ public class GameManager : MonoBehaviour
             healthTmp = takeDamageCooldown;
             healthBar.text = "Health: " + health;
         }
+        if (health <= 0)
+        {
+            Time.timeScale = 0;
+            scoreText.text = "Score: " + score;
+            resultText.text = "Game over\n Press R to restart";
+        }
+        
+    }
+    public void ScoreStatus()
+    {
+
     }
 }
