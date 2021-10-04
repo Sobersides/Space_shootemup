@@ -27,11 +27,16 @@ public class SpawnRandomObstacle : MonoBehaviour
         float rnd = Random.value;
         print(rnd);
         timer -= Time.deltaTime;
-        if (timer < 0 && rnd <= chance)
+        if (timer < 0)
         {
-            var prefab = Chooser();
-            var newBlock = Instantiate(prefab);
-            timer = 5;
+            if (rnd <= chance)
+            {
+                var prefab = Chooser();
+                var newBlock = Instantiate(prefab);
+                timer = 6;
+            }
+            else
+                timer = 2;
         }
     }
 

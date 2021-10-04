@@ -427,8 +427,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scorePrefab: {fileID: 4817343721117113596, guid: bbe4100e9bb709e459d2d00674b00f32, type: 3}
   ship: {fileID: 0}
-  takeDamageCooldown: 1
-  health: 1
+  takeDamageCooldown: 3
+  health: 3
   resultText: {fileID: 1691604732}
   healthBar: {fileID: 892678023}
   scoreText: {fileID: 1691604731}
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cd3989b041a6a47b0970716dfd5542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 0.5
+  chance: 0.3
   BigObstacle: {fileID: 5070555356972335661, guid: 345afd52f4522974793ae97fb32d62eb, type: 3}
 --- !u!4 &552191465
 Transform:
@@ -1278,6 +1278,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 892678023}
+    - target: {fileID: 4662605676214913558, guid: 5726cce6462b7e041b0979190ab0187c, type: 3}
+      propertyPath: MaxAngularVelocity
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4662605676214913559, guid: 5726cce6462b7e041b0979190ab0187c, type: 3}
       propertyPath: m_Name
       value: Ship
