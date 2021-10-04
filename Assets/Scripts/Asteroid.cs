@@ -8,6 +8,7 @@ public class Asteroid : MonoBehaviour
     public GameObject destroyAnimation;
     private ParticleSystem explosion;
     private CircleCollider2D collisionDetection;
+    private AudioSource boom;
 
     GameManager gm;
 
@@ -17,7 +18,7 @@ public class Asteroid : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
         explosion = GetComponentInChildren<ParticleSystem>();
         collisionDetection = GetComponent<CircleCollider2D>();
-
+        boom = GetComponent<AudioSource>();
         // Maybe a kill trigger instead
         Destroy(this.gameObject, 3);
     }
@@ -38,7 +39,7 @@ public class Asteroid : MonoBehaviour
             }
             destroyAnimation.SetActive(true);
             explosion.Play();
-
+            boom.Play();
             Destroy(this.gameObject, .2f);
             gm.ScoreStatus(10);
 
